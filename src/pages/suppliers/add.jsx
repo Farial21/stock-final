@@ -6,7 +6,7 @@ export default function AddSupplierPage() {
     const [data, setData] = useState("");
 
     const saveSupplier = async (data) => {
-        const response = await fetch(`http://localhost:3000/api/stock/suppliers/`, {
+        const response = await fetch(`https://stock-final-5916886.vercel.app/api/stock/suppliers/`, {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             //mode: "cors", // no-cors, *cors, same-origin
             cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
