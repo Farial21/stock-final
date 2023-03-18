@@ -1,27 +1,26 @@
 import Link from "next/link"
 import { Fragment } from "react"
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const Navigation = () => {
+export default function Navigation() {
     return (
-        <Fragment>
-            <Navbar bg="dark" variant="dark" expand="lg">
-            <Container>
-                <Navbar.Brand>ABC Stocks</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/suppliers">Supplier Management</Nav.Link>
-                    <Nav.Link href="/suppliers/add">New Supplier</Nav.Link>
-                </Nav>
-                </Navbar.Collapse>
-            </Container>
-            </Navbar>
-        </Fragment>
-    )
+        <>
+        <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+        </head>
+        <nav class="navbar navbar-dark bg-light">
+            <a class="navbar-brand">ABC Stocks</a>
+            <div class="form-inline" id="navbarNav">
+                <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="/suppliers">Supplier Management</a>
+                <a class="nav-item nav-link active" href="/suppliers/add">New Supplier</a>
+            </div>
+        </nav>
+        </>
+        
+    );
 }
-export default Navigation
